@@ -1,6 +1,8 @@
 var startBtn = document.querySelector("#start");
 var timeEl = document.querySelector("#time");
 
+startBtn.addEventListener("click", startTimer);
+
 function startTimer() {
     document.querySelector(".intro-section").classList.add("hide");
     document.querySelector(".questions-section").classList.remove("hide");
@@ -15,11 +17,10 @@ function startTimer() {
         } else {
             timeEl.textContent = "";
             clearInterval(timeInterval);
-    alert("You are out of time! Click 'OK' to view your score.");
-    location.href = "score.html";
-        } 
+            alert("You are out of time!");
+            location.href = "score.html";
+        }
 
-}, 1000);
+    }, 1000);
 }
 
-startBtn.addEventListener("click", startTimer);
