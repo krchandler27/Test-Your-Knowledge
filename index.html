@@ -12,18 +12,23 @@
 <body>
     <header>
        <h3> <p><span href="./score.html" >View Scoreboard</span></p>
-        <p id= hdr-can-you-code>Quiz: Can You Code?</p>
+        <p class= "hdr-can-you-code hide">Quiz: Can You Code?</p>
     <p>Time Remaining: <span id="time">120</span></p></h3>
     </header>
 
     <section class="intro-section">
         <h1 id="can-you-code"> Quiz: Can You Code? </h1>
-        <button id="start">Start</button>
+        <button id="start-btn" class=" start-btn">Start</button>
+        <button id="next-btn" class="next-btn"> Next </button>
     </section>
 
-    <section class="questions-section hide">
-        <h3 class="question-title"></h3>
-        <div class="choices"></div>
+    <section id="question-containter hide">
+    <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid"></div>
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
     </section>
 
     <section class="initials-section hide">

@@ -1,11 +1,10 @@
 body {
     background-color: rgba(2, 2, 114, 0.836);
     color: white;
+    font-family: 'Gotham Rounded', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
-
-
-.hide{
+.hide {
     display: none;
 }
 
@@ -20,23 +19,29 @@ header h3 {
     justify-content: space-between;
 }
 
-#hdr-can-you-code {
-    font-size:50px;
+.hdr-can-you-code {
+    font-size: 50px;
+
 }
 
 #can-you-code {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     font-size: 60px;
     color: white;
 
 }
 
-#start {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+#start-btn {
+    font-size: 60px;
+    border: 10px;
+    border-color: rgb(124, 5, 5);
+    border-radius: 10px;
+    vertical-align: auto;
+}
+
+.next-btn {
+    align-items: right;
     font-size: 60px;
     border: 10px;
     border-color: rgb(124, 5, 5);
