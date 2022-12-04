@@ -33,17 +33,23 @@ header h3 {
 }
 
 #start-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 60px;
     border: 10px;
     border-color: rgb(124, 5, 5);
     border-radius: 10px;
-    vertical-align: auto;
+    
 }
 
 .next-btn {
-    align-items: right;
-    font-size: 60px;
+      font-size: 60px;
     border: 10px;
     border-color: rgb(124, 5, 5);
     border-radius: 10px;
+}
+
+.btn {
+    
 }
