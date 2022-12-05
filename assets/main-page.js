@@ -1,22 +1,59 @@
 var startBtn = document.querySelector("#start-btn");
 var timeEl = document.querySelector("#time");
+var timeLeft = 60;
+var questionIndex = 0;
+var questionContainer = document.querySelector("#question-container");
+
+var questions = [
+    {
+        question: "______________ is considered the muscles of coding.",
+        choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "All of the above"],
+        answer: "JavaScript"
+    },
+
+    {
+
+        question: "What is it called when you run into an error and then you work to fix the problem(s) in the code?",
+        choices: ["Hebugging", "Shebugging", "Rebugging", "Debugging"],
+        answer: "Debugging"
+    },
 
 
-startBtn.addEventListener("click", startTimer);
 
-var button1 = document.getElementById("btn-1");
-var button2 = document.getElementById("btn-2");
-var button3 = document.getElementById("btn-3");
-var button4 = document.getElementById("btn-4");
+]
 
-button1.addEventListener("click", );
+startBtn.addEventListener("click", startGame);
 
-function startTimer() {
+function startGame() {
+
+    Timer();
+
     document.querySelector(".intro-section").classList.add("hide");
     document.querySelector(".hdr-can-you-code").classList.remove("hide");
     document.querySelector(".next-btn").classList.remove("hide");
 
-    var timeLeft = 5;
+createQuestion();
+
+// createAnswers();
+
+}
+
+function createQuestion() {
+    var currentQ = questions[questionIndex];
+    var questionHeader = document.createElement("h2");
+    questionHeader.textContent = currentQ.question;
+    questionContainer.appendChild(questionHeader);
+}
+
+// function createAnswers() {
+//     var currentAnswers= questions[questionIndex];
+//     var questionHeader = document.createElement("h2");
+//     questionHeader.textContent = currentQ.question;
+//     questionContainer.appendChild(questionHeader);
+// }
+
+function Timer() {
+ 
     var timeInterval = setInterval(function () {
 
         if (timeLeft > -1) {
@@ -27,10 +64,9 @@ function startTimer() {
             timeEl.textContent = "";
             clearInterval(timeInterval);
             alert("You are out of time!");
-            location.href = "score.html";
+            location.href = "score-page.html";
         }
 
     }, 1000);
 }
-
 
