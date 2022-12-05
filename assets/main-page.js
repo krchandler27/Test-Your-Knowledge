@@ -34,23 +34,32 @@ function startGame() {
 
 createQuestion();
 
-// createAnswers();
-
 }
 
 function createQuestion() {
     var currentQ = questions[questionIndex];
     var questionHeader = document.createElement("h2");
+    questionHeader.setAttribute("class", "questionHeader");
     questionHeader.textContent = currentQ.question;
     questionContainer.appendChild(questionHeader);
-}
 
-// function createAnswers() {
-//     var currentAnswers= questions[questionIndex];
-//     var questionHeader = document.createElement("h2");
-//     questionHeader.textContent = currentQ.question;
-//     questionContainer.appendChild(questionHeader);
+    for (var i = 0; i < currentQ.choices.length; i++){
+        var choice = currentQ.choices[i];
+        var choiceContainer = document.createElement("button");
+        choiceContainer.setAttribute("class", "questions");
+        choiceContainer.textContent = choice;
+        questionContainer.appendChild(choiceContainer);
+        }
+
+        }
+
+// question.Choice = question.Answer
+// function questionClick(event) { 
+
 // }
+
+
+
 
 function Timer() {
  

@@ -24,32 +24,51 @@ header h3 {
 
 }
 
+#scoreLink {
+    color: white;
+}
+
 #can-you-code {
     text-align: center;
-
     font-size: 60px;
     color: white;
 
 }
 
 #start-btn {
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 60px;
-    border: 10px;
-    border-color: rgb(124, 5, 5);
-    border-radius: 10px;
-    
+    border: 10px solid black;
+    background-color: rgb(158, 16, 16);
+    border-radius: 30px;
 }
 
 .next-btn {
-      font-size: 60px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
     border: 10px;
     border-color: rgb(124, 5, 5);
     border-radius: 10px;
 }
 
-.btn {
-    
+.questions {
+    margin: auto;
+    display: list-item;
+    display: flex;
+    justify-content: left;
+    color: rgba(2, 2, 114, 0.836);
+    font-size: 40px;
+    border: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+
+.questionHeader {
+text-align: center;
 }
