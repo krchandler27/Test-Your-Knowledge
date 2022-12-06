@@ -7,18 +7,16 @@ var questionContainer = document.querySelector("#question-container");
 var questions = [
     {
         question: "______________ is considered the muscles of coding.",
-        choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "All of the above"],
+        choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "Python"],
         answer: "JavaScript"
     },
 
     {
 
-        question: "What is it called when you run into an error and then you work to fix the problem(s) in the code?",
+        question: "_______________ is when you work through errors in your code and fix them so that the app will run.",
         choices: ["Hebugging", "Shebugging", "Rebugging", "Debugging"],
         answer: "Debugging"
     },
-
-
 
 ]
 
@@ -28,9 +26,10 @@ function startGame() {
 
     document.querySelector(".intro-section").classList.add("hide");
     document.querySelector(".hdr-can-you-code").classList.remove("hide");
-    document.querySelector(".next-btn").classList.remove("hide");
+    document.querySelector(".timeRemaining").classList.remove("hide");
+    document.querySelector(".seconds").classList.remove("hide");
 
-createQuestion();
+    createQuestion();
 
 }
 
@@ -42,35 +41,35 @@ function createQuestion() {
     questionHeader.textContent = currentQ.question;
     questionContainer.appendChild(questionHeader);
 
-    for (var i = 0; i < currentQ.choices.length; i++){
+    for (var i = 0; i < currentQ.choices.length; i++) {
         var choice = currentQ.choices[i];
         var choiceContainer = document.createElement("button");
         choiceContainer.setAttribute("class", "questions");
         choiceContainer.textContent = choice;
         questionContainer.appendChild(choiceContainer);
-        }
+    }
 
 
 
-        }
-
-
-function questionClick(event) { 
-var clickedButton = event.target.textContent;
-console.log(clickedButton);
-
-if (clickedButton !== questions[questionIndex].answer ){
-timeLeft = timeLeft - 5;
 }
-questionIndex++;
-createQuestion ();
+
+
+function questionClick(event) {
+    var clickedButton = event.target.textContent;
+    console.log(clickedButton);
+
+    if (clickedButton !== questions[questionIndex].answer) {
+        timeLeft = timeLeft - 5;
+    }
+    questionIndex++;
+    createQuestion();
 
 }
 
 questionContainer.addEventListener("click", questionClick);
 
 function Timer() {
- 
+
     var timeInterval = setInterval(function () {
 
         if (timeLeft > -1) {

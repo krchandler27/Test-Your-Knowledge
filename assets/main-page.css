@@ -21,7 +21,9 @@ header h3 {
 }
 
 .hdr-can-you-code {
-    font-size: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -40px;
 
 }
 
@@ -77,4 +79,8 @@ text-align: center;
 
 a:visited {
     color: white;
+  }
+
+  #question-container {
+    margin-top: 75px;
   }
