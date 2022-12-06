@@ -22,8 +22,6 @@ var questions = [
 
 ]
 
-startBtn.addEventListener("click", startGame);
-
 function startGame() {
 
     Timer();
@@ -37,6 +35,7 @@ createQuestion();
 }
 
 function createQuestion() {
+    questionContainer.innerHTML = ''
     var currentQ = questions[questionIndex];
     var questionHeader = document.createElement("h2");
     questionHeader.setAttribute("class", "questionHeader");
@@ -51,15 +50,24 @@ function createQuestion() {
         questionContainer.appendChild(choiceContainer);
         }
 
+
+
         }
 
-// question.Choice = question.Answer
-// function questionClick(event) { 
 
-// }
+function questionClick(event) { 
+var clickedButton = event.target.textContent;
+console.log(clickedButton);
 
+if (clickedButton !== questions[questionIndex].answer ){
+timeLeft = timeLeft - 5;
+}
+questionIndex++;
+createQuestion ();
 
+}
 
+questionContainer.addEventListener("click", questionClick);
 
 function Timer() {
  
@@ -79,3 +87,4 @@ function Timer() {
     }, 1000);
 }
 
+startBtn.addEventListener("click", startGame);

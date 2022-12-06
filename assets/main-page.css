@@ -1,6 +1,7 @@
 body {
     background-color: rgba(2, 2, 114, 0.836);
     color: white;
+    font-size: 25px;
     font-family: 'Gotham Rounded', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
@@ -26,6 +27,7 @@ header h3 {
 
 #scoreLink {
     color: white;
+    font-size: 25px;
 }
 
 #can-you-code {
@@ -72,3 +74,7 @@ header h3 {
 .questionHeader {
 text-align: center;
 }
+
+a:visited {
+    color: white;
+  }
