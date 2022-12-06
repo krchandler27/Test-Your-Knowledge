@@ -17,7 +17,36 @@ var questions = [
         choices: ["Hebugging", "Shebugging", "Rebugging", "Debugging"],
         answer: "Debugging"
     },
-
+    {
+        question: "______________ is considered the bones of coding.",
+        choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "Python"],
+        answer: "Hypertext Markup Language"
+    },
+    {
+        question: "______________ is considered the skin of coding.",
+        choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "Python"],
+        answer: "Cascading Style Sheets"
+    },
+    {
+        question: "Given the line of code: 'var questionContainer = document.querySelector('.alphabet');' what class is being selected and by what variable?(Respectively)",
+        choices: ["querySelector, questionContainer", "alphabet, questionContainer", "alphabet, document.querySelector", "document, .querySelector"],
+        answer: "alphabet, questionContainer"
+    },
+    {
+        question: "Given the line of code: 'document.querySelector('.intro-section').classList.add('hide');' what is the most accurate and detailed description of what is being executed?",
+        choices: ["You tell me", "The class hide is being added to an element in the html document with the class of 'intro-section'", "The class list is going to hide something in the document", "Phone a friend"],
+        answer: "The class hide is being added to an element in the html document with the class of 'intro-section'"
+    },
+    {
+        question: "What is the best name for this type of code 'for (var i = 0; i < currentQ.choices.length; i++)'?",
+        choices: ["for loop", "i-testing", "inter-looping", "elemental concurrency"],
+        answer: "for loop"
+    },
+    {
+        question: "What do alerts do in JavaScript?",
+        choices: ["They alert the user of something and then the user gets to type in their answer.", "They help to tie-together code is there are any bugs.", "None of the above.", "They loop the code if something is found to be wrong."],
+        answer: "None of the above."
+    },
 ]
 
 function startGame() {

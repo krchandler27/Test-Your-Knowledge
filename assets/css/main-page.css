@@ -64,23 +64,32 @@ header h3 {
     display: flex;
     justify-content: left;
     color: rgba(2, 2, 114, 0.836);
+    font-weight: bold;
     font-size: 40px;
     border: 10px;
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
     font-weight: 500;
+    padding: 5px 5px 5px 5px;
 
 }
 
 .questionHeader {
-text-align: center;
+    text-align: center;
 }
 
 a:visited {
     color: white;
-  }
+}
 
-  #question-container {
+#question-container {
     margin-top: 75px;
-  }
+
+}
+
+/* styling for scoreboard below */
+
+#scoreboard {
+    text-align: center;
+}
