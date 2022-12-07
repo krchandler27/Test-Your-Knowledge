@@ -78,22 +78,21 @@ function createQuestion() {
         questionContainer.appendChild(choiceContainer);
     }
 
-    var rightOrWrong = document.createElement("h2");
-    rightOrWrong.setAttribute("class", "rightOrWrong");
-    questionContainer.appendChild(rightOrWrong);
-
-
-}
+ }
 
 
 function questionClick(event) {
     var clickedButton = event.target.textContent;
-    rightOrWrong.textContent = "Correct!";
+    var rightOrWrong = document.createElement("h2");
+    rightOrWrong.setAttribute("class", "rightOrWrong");
+    questionContainer.appendChild(rightOrWrong);
+  
 
     if (clickedButton !== questions[questionIndex].answer) {
         timeLeft = timeLeft - 5;
         rightOrWrong.textContent = "Incorrect!";
     }
+    rightOrWrong.textContent = "Correct!";
     questionIndex++;
     createQuestion();
 
