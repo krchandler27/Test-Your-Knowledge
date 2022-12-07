@@ -78,6 +78,9 @@ function createQuestion() {
         questionContainer.appendChild(choiceContainer);
     }
 
+    var rightOrWrong = document.createElement("h2");
+    rightOrWrong.setAttribute("class", "rightOrWrong");
+    questionContainer.appendChild(rightOrWrong);
 
 
 }
@@ -85,10 +88,11 @@ function createQuestion() {
 
 function questionClick(event) {
     var clickedButton = event.target.textContent;
-    console.log(clickedButton);
+    rightOrWrong.textContent = "Correct!";
 
     if (clickedButton !== questions[questionIndex].answer) {
         timeLeft = timeLeft - 5;
+        rightOrWrong.textContent = "Incorrect!";
     }
     questionIndex++;
     createQuestion();
