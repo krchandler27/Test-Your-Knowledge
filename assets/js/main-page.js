@@ -61,7 +61,6 @@ function startGame() {
     document.querySelector(".feedbackSentence").classList.remove("hide");
 
     createQuestion();
-
 }
 
 function createQuestion() {
@@ -82,7 +81,6 @@ function createQuestion() {
 
  }
 
-1
 function questionClick(event) {
     var clickedButton = event.target.textContent;
  
@@ -114,7 +112,7 @@ function Timer() {
             clearInterval(timeInterval);
             alert("You are out of time!");
             location.href = "score-page.html";
-            
+
         }
 
     }, 1000);
