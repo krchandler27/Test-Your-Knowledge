@@ -3,6 +3,7 @@ var timeEl = document.querySelector("#time");
 var timeLeft = 60;
 var questionIndex = 0;
 var questionContainer = document.querySelector("#question-container");
+var feedback = document.querySelector("#feedback")
 
 var questions = [
     {
@@ -57,6 +58,7 @@ function startGame() {
     document.querySelector(".hdr-can-you-code").classList.remove("hide");
     document.querySelector(".timeRemaining").classList.remove("hide");
     document.querySelector(".seconds").classList.remove("hide");
+    document.querySelector(".feedbackSentence").classList.remove("hide");
 
     createQuestion();
 
@@ -80,23 +82,22 @@ function createQuestion() {
 
  }
 
-
+1
 function questionClick(event) {
     var clickedButton = event.target.textContent;
-    var rightOrWrong = document.createElement("h2");
-    rightOrWrong.setAttribute("class", "rightOrWrong");
-    questionContainer.appendChild(rightOrWrong);
-  
-
+ 
     if (clickedButton !== questions[questionIndex].answer) {
         timeLeft = timeLeft - 5;
-        rightOrWrong.textContent = "Incorrect!";
+        feedback.textContent = "incorrect! You lost 5 seconds of time.";
     }
-    rightOrWrong.textContent = "Correct!";
+    if (clickedButton == questions[questionIndex].answer) {
+        timeLeft = timeLeft + 2;
+    feedback.textContent = "correct! You gained 2 seconds of time!";
+    }
+    
     questionIndex++;
     createQuestion();
-
-}
+  }
 
 questionContainer.addEventListener("click", questionClick);
 
@@ -113,6 +114,7 @@ function Timer() {
             clearInterval(timeInterval);
             alert("You are out of time!");
             location.href = "score-page.html";
+            
         }
 
     }, 1000);

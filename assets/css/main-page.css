@@ -92,9 +92,13 @@ a:link {
     color: white;
 }
 
-#question-container {
-    margin-top: 75px;
+.feedbackSentence {
+    margin-top: 25px;
+    text-align:center;
+}
 
+#question-container {
+    margin-top: 15px;
 }
 
 /* styling for scoreboard below */
@@ -105,4 +109,10 @@ a:link {
 
 .rightOrWrong {
     color: white;
+}
+
+#feedback {
+    text-align:center;
+    font-weight: bold;
+    font-size: 25px;
 }
