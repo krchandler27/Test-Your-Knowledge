@@ -1,5 +1,5 @@
 var startBtn = document.querySelector("#start-btn");
-var submitBtn = document.querySelector("submit-btn");
+var submitBtn = document.getElementById("submit-btn");
 var timeEl = document.querySelector("#time");
 var timeLeft = 60;
 var questionIndex = 0;
@@ -53,7 +53,7 @@ var questions = [
 
 function startGame() {
 
-    Timer();
+    timer();
 
     document.querySelector(".intro-section").classList.add("hide");
     document.querySelector(".hdr-can-you-code").classList.remove("hide");
@@ -68,6 +68,13 @@ function createQuestion() {
     questionContainer.innerHTML = ''
     var currentQ = questions[questionIndex];
     var questionHeader = document.createElement("h2");
+
+    if (!questions[questionIndex]) {
+        console.log(questions[questionIndex]);
+        gameOver();
+        return;
+    }
+
     questionHeader.setAttribute("class", "questionHeader");
     questionHeader.textContent = currentQ.question;
     questionContainer.appendChild(questionHeader);
@@ -93,13 +100,6 @@ function questionClick(event) {
         timeLeft = timeLeft + 2;
         feedback.textContent = "correct! You gained 2 seconds of time!";
     }
-    if (clickedButton == questions[7].choices) {
-        clearInerval();
-        // gameOver ();
-    }
-    // document.querySelector("#gameOver").classList.remove("hide");
-    // finalScore.textContent = timeLeft;
-
 
     questionIndex++;
     createQuestion();
@@ -107,10 +107,13 @@ function questionClick(event) {
 
 questionContainer.addEventListener("click", questionClick);
 
-function Timer() {
+function timer() {
 
     var timeInterval = setInterval(function () {
 
+        if (!questions[questionIndex]) {
+            clearInterval(timeInterval);
+        }
         if (timeLeft > -1) {
             timeEl.textContent = timeLeft + " seconds";
             timeLeft--;
@@ -119,21 +122,24 @@ function Timer() {
             timeEl.textContent = "";
             clearInterval(timeInterval);
             alert("You are out of time!");
-
         }
 
     }, 1000);
 }
 
-// function gameOver () {
+function gameOver() {
 
-// document.querySelector(".feedbackSentence").classList.add("hide");
+    document.querySelector(".feedbackSentence").classList.add("hide");
+    document.querySelector(".gameOver").classList.remove("hide");
+    document.getElementById("final-score").innerHTML = timeLeft;
+}
 
-// document.getElementById("score").innerHTML = timeleft;
-
-function scorePage () {
+function scorePage() {
+    localStorage.setItem("scores", "hello");
+    // get value of id="initials", get value to timeLeft variable
+    // save them as a variable^^^ that is an object which is { age: 5
+    // last step you need an array to push to object into, save the array as the local storage. get item as well
     window.location.href = "score-page.html";
 }
 startBtn.addEventListener("click", startGame);
 submitBtn.addEventListener("click", scorePage);
-
