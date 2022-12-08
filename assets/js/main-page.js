@@ -1,9 +1,11 @@
 var startBtn = document.querySelector("#start-btn");
+var submitBtn = document.querySelector("submit-btn");
 var timeEl = document.querySelector("#time");
 var timeLeft = 60;
 var questionIndex = 0;
 var questionContainer = document.querySelector("#question-container");
-var feedback = document.querySelector("#feedback")
+var feedback = document.querySelector("#feedback");
+var finalScore = document.querySelector("#finalScore");
 
 var questions = [
     {
@@ -11,7 +13,6 @@ var questions = [
         choices: ["Hypertext Markup Language", "Cascading Style Sheets", "JavaScript", "Python"],
         answer: "JavaScript"
     },
-
     {
 
         question: "_______________ is when you work through errors in your code and fix them so that the app will run.",
@@ -79,23 +80,30 @@ function createQuestion() {
         questionContainer.appendChild(choiceContainer);
     }
 
- }
+}
 
 function questionClick(event) {
     var clickedButton = event.target.textContent;
- 
+
     if (clickedButton !== questions[questionIndex].answer) {
         timeLeft = timeLeft - 5;
         feedback.textContent = "incorrect! You lost 5 seconds of time.";
     }
     if (clickedButton == questions[questionIndex].answer) {
         timeLeft = timeLeft + 2;
-    feedback.textContent = "correct! You gained 2 seconds of time!";
+        feedback.textContent = "correct! You gained 2 seconds of time!";
     }
-    
+    if (clickedButton == questions[7].choices) {
+        clearInerval();
+        // gameOver ();
+    }
+    // document.querySelector("#gameOver").classList.remove("hide");
+    // finalScore.textContent = timeLeft;
+
+
     questionIndex++;
     createQuestion();
-  }
+}
 
 questionContainer.addEventListener("click", questionClick);
 
@@ -111,11 +119,21 @@ function Timer() {
             timeEl.textContent = "";
             clearInterval(timeInterval);
             alert("You are out of time!");
-            location.href = "score-page.html";
 
         }
 
     }, 1000);
 }
 
+// function gameOver () {
+
+// document.querySelector(".feedbackSentence").classList.add("hide");
+
+// document.getElementById("score").innerHTML = timeleft;
+
+function scorePage () {
+    window.location.href = "score-page.html";
+}
 startBtn.addEventListener("click", startGame);
+submitBtn.addEventListener("click", scorePage);
+
