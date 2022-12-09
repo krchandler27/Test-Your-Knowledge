@@ -78,11 +78,11 @@ header h3 {
 
 .questionHeader {
     text-align: center;
-    }
+}
 
 button:hover {
     background-color: rgba(197, 195, 195, 0.87);
-    }
+}
 
 a:visited {
     color: white;
@@ -94,7 +94,7 @@ a:link {
 
 .feedbackSentence {
     margin-top: 25px;
-    text-align:center;
+    text-align: center;
 }
 
 #question-container {
@@ -112,13 +112,19 @@ a:link {
 }
 
 #feedback {
-    text-align:center;
+    text-align: center;
     font-weight: bold;
     font-size: 25px;
 }
 
 .gameOver {
-    text-align:center;
+    text-align: center;
     font-weight: bold;
     font-size: 45px;
+}
+
+#scoreTable {
+    text-align: center;
+    font-size: 30px;
+}
 }
