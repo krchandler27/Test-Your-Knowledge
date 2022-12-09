@@ -146,8 +146,7 @@ function scorePage() {
             initials: initialsValue
         }
         highScores.push(newestScore);
-        localStorage.setItem("finalScore", finalScore);
-        localStorage.setItem("initials", initials);
+        window.localStorage.setItem("finalScore", JSON.stringify(highScores));
     }
 
     // get value of id="initials", get value to timeLeft variable
