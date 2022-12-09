@@ -5,7 +5,9 @@ var timeLeft = 60;
 var questionIndex = 0;
 var questionContainer = document.querySelector("#question-container");
 var feedback = document.querySelector("#feedback");
-var finalScore = document.querySelector("#finalScore");
+var finalScore = document.querySelector("#final-score");
+var initials = document.getElementById("initials");
+
 
 var questions = [
     {
@@ -127,15 +129,27 @@ function timer() {
     }, 1000);
 }
 
-function gameOver() {
-
+function gameOver(event) {
+    // event.preventDefault();
     document.querySelector(".feedbackSentence").classList.add("hide");
     document.querySelector(".gameOver").classList.remove("hide");
     document.getElementById("final-score").innerHTML = timeLeft;
 }
 
 function scorePage() {
-    localStorage.setItem("scores", "hello");
+    var initialsValue = initials.value.trim();
+
+    if (initialsValue !== "") {
+        var highScores = JSON.parse(localStorage.getItem("finalScore")) || [];
+        var newestScore = {
+            score: timeLeft,
+            initials: initialsValue
+        }
+        highScores.push(newestScore);
+        localStorage.setItem("finalScore", finalScore);
+        localStorage.setItem("initials", initials);
+    }
+
     // get value of id="initials", get value to timeLeft variable
     // save them as a variable^^^ that is an object which is { age: 5
     // last step you need an array to push to object into, save the array as the local storage. get item as well
