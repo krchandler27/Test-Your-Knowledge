@@ -12,3 +12,5 @@ function printHighscores() {
         olEl.appendChild(liTag);
     }
 }
+
+printHighscores();
