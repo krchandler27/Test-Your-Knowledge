@@ -76,7 +76,6 @@ function createQuestion() {
         gameOver();
         return;
     }
-
     questionHeader.setAttribute("class", "questionHeader");
     questionHeader.textContent = currentQ.question;
     questionContainer.appendChild(questionHeader);
@@ -88,7 +87,6 @@ function createQuestion() {
         choiceContainer.textContent = choice;
         questionContainer.appendChild(choiceContainer);
     }
-
 }
 
 function questionClick(event) {
@@ -106,8 +104,6 @@ function questionClick(event) {
     questionIndex++;
     createQuestion();
 }
-
-questionContainer.addEventListener("click", questionClick);
 
 function timer() {
 
@@ -130,7 +126,6 @@ function timer() {
 }
 
 function gameOver(event) {
-    // event.preventDefault();
     document.querySelector(".feedbackSentence").classList.add("hide");
     document.querySelector(".gameOver").classList.remove("hide");
     document.getElementById("final-score").innerHTML = timeLeft;
@@ -149,10 +144,8 @@ function scorePage() {
         window.localStorage.setItem("finalScore", JSON.stringify(highScores));
     }
 
-    // get value of id="initials", get value to timeLeft variable
-    // save them as a variable^^^ that is an object which is { age: 5
-    // last step you need an array to push to object into, save the array as the local storage. get item as well
     window.location.href = "score-page.html";
 }
 startBtn.addEventListener("click", startGame);
 submitBtn.addEventListener("click", scorePage);
+questionContainer.addEventListener("click", questionClick);

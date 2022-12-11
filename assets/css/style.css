@@ -134,3 +134,15 @@ a:link {
  margin-left: 45%;
     font-size: 30px;
 }
+
+#clearScores {
+    margin: auto;
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    border: 10px solid black;
+    background-color: rgb(158, 16, 16);
+    border-radius: 30px;
+    color: black;
+    margin-top: -30px;
+}
