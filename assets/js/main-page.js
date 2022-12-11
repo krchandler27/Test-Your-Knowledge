@@ -93,12 +93,12 @@ function questionClick(event) {
     var clickedButton = event.target.textContent;
 
     if (clickedButton !== questions[questionIndex].answer) {
-        timeLeft = timeLeft - 5;
-        feedback.textContent = "incorrect! You lost 5 seconds of time.";
+        timeLeft = timeLeft - 4;
+        feedback.textContent = "Incorrect! -5 seconds";
     }
     if (clickedButton == questions[questionIndex].answer) {
-        timeLeft = timeLeft + 2;
-        feedback.textContent = "correct! You gained 2 seconds of time!";
+        timeLeft = timeLeft + 3;
+        feedback.textContent = "Correct! +2 seconds";
     }
 
     questionIndex++;

@@ -23,7 +23,7 @@ header h3 {
 .hdr-can-you-code {
     font-size: 30px;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -90px;
 
 }
 
@@ -73,7 +73,6 @@ header h3 {
     border-radius: 10px;
     font-weight: 500;
     padding: 5px 5px 5px 5px;
-
 }
 
 .questionHeader {
@@ -95,6 +94,7 @@ a:link {
 .feedbackSentence {
     margin-top: 25px;
     text-align: center;
+    font-size: 25px;
 }
 
 #question-container {
@@ -116,6 +116,8 @@ a:link {
     text-align: center;
     font-weight: bold;
     font-size: 25px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .gameOver {
@@ -138,12 +140,17 @@ a:link {
 }
 
 #clearScores {
-    display: flex;
-    justify-content: right;
     font-size: 20px;
     border: 10px solid black;
     background-color: rgb(158, 16, 16);
     border-radius: 30px;
     color: black;
-
 }
+
+body ol p {
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
+/* float:right */
