@@ -105,6 +105,7 @@ a:link {
 
 #scoreboard {
     text-align: center;
+    margin-top: -60px;
 }
 
 .rightOrWrong {
@@ -125,18 +126,18 @@ a:link {
 
 #scoreTable {
     text-align: center;
-    list-style-position:outside;
+    list-style-position: outside;
     font-size: 30px;
 }
 
 #scoreTable li {
     text-align: left;
- margin-left: 45%;
+    margin-left: 45%;
     font-size: 30px;
+    margin-top: -25px;
 }
 
 #clearScores {
-    margin: auto;
     display: flex;
     justify-content: right;
     font-size: 20px;
@@ -144,5 +145,5 @@ a:link {
     background-color: rgb(158, 16, 16);
     border-radius: 30px;
     color: black;
-    margin-top: -30px;
+
 }
