@@ -127,12 +127,13 @@ a:link {
     text-align: center;
     list-style-position: outside;
     font-size: 30px;
-}
+   }
 
 #scoreTable li {
     text-align: left;
     margin-left: 45%;
     font-size: 30px;
+    margin-bottom: 10px;
    }
 
 #clearScores {
