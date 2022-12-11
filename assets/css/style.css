@@ -18,13 +18,7 @@ header {
 header h3 {
     display: flex;
     justify-content: space-between;
-}
-
-.hdr-can-you-code {
     font-size: 30px;
-    text-align: center;
-    margin-top: -90px;
-
 }
 
 #scoreLink {
@@ -91,21 +85,24 @@ a:link {
     color: white;
 }
 
-.feedbackSentence {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 25px;
-}
-
 #question-container {
     margin-top: 15px;
+}
+
+#summary {
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: justify;
+    margin-top: -15px;
+    margin-bottom: 50px;
+    font-size: 35px;
 }
 
 /* styling for scoreboard below */
 
 #scoreboard {
     text-align: center;
-    margin-top: -60px;
+    margin-top: -20px;
 }
 
 .rightOrWrong {
@@ -116,7 +113,7 @@ a:link {
     text-align: center;
     font-weight: bold;
     font-size: 25px;
-    margin-top: 60px;
+    margin-top: 45px;
     margin-bottom: 60px;
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>Quiz: Can You Code?</title>
     <link rel="shortcut icon" href="./assets/images/q.JPG">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -14,19 +14,19 @@
     <header>
         <h3>
             <p id="scoreLink"><a href="./score-page.html">View Scoreboard</a></p>
-            <p class="timeRemaining hide">Time Remaining: <span id="time" class="seconds hide">60</span></p>
+            <p class="hdr-can-you-code hide">Quiz: Can You Code?</p>
+            <p class="timeRemaining hide">Timer: <span id="time" class="seconds hide">60</span></p>
         </h3>
     </header>
 
-    <section class="hdr-can-you-code hide">Quiz: Can You Code?</section>
-
     <section class="intro-section">
         <h1 id="can-you-code"> Quiz: Can You Code? </h1>
+        <h2 id="summary"> You have 60 seconds to answer 8 questions about coding. If you answer a question incorrectly, you will lose 5 seconds of time. If you answer a question correctly, you will gain 2 seconds of time. The timer will begin promptly after pressing the "Start" button below. How will you fare? </h2>
         <section class="start-btn"> <button id="start-btn">Start</button>
         </section>
 
     </section>
-    <div id="feedback" class="feedbackSentence hide" >
+    <div id="feedback" class="feedbackSentence hide">
     </div>
     <section id="question-container"> </section>
 
